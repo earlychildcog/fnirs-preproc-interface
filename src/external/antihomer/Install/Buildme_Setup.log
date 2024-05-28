@@ -1,0 +1,26 @@
+==================================:
+Building setup from these files:
+==================================:
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/Buildme_Setup.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/GenerateSNIRFReaderWriter.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/cleanup.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/createInstallFile.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/findWaveletDb2.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/finishInstallGUI.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/generateDesktopPath.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/getAppname.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/getRelativePath.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/homePageFullPath.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/myCopyFile.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/removeEntryFromList.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Install/setplatformparams.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Utils/Shared/Logger.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Utils/Shared/str2cell.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Utils/Shared/printStack.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Utils/Shared/pathscompare.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Utils/Shared/parseOptions.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Utils/Shared/optionExists.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Utils/Shared/fullpath.m
+/Users/dim-ask/Documents/MATLAB/playground/nirs/Homer3/Utils/Shared/filesepStandard.m
+
+

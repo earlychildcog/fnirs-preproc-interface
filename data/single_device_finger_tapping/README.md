@@ -1,0 +1,2 @@
+snirf file Brite Fingertapping 5-12-2020.snirf comes from Artinis Medical Systems demo in https://github.com/Artinis-Medical-Systems-B-V/snirf_data_example
+all rights on this dataset belongs to Artinis Medical Systems

@@ -1,0 +1,9 @@
+*.asv
+*~
+.DS_Store
+*processed*
+*.mat
+data/*
+!data/single_device_finger_tapping
+main_*.m
+.log

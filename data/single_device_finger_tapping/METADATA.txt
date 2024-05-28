@@ -1,0 +1,11 @@
+Name: Brite Fingertapping 5-12-2020.snirf; Brite Fingertapping 5-19-2020.snirf; Brite Fingertapping 5-15-2020.snirf
+
+Description: Finger tapping task
+
+Devices, streams: Brite24 SysID 24052
+
+Location of sensors: Brite with 20 long channels and 2 short separation channels using 8 Rx and 10 Tx used for Homer exportation; Channel Rx7-Tx10 was positioned over the motor cortex
+Events: The experiment starts with a resting period of approximately 30 seconds, where the participants have to fix ytheir eyes on the X, relax and try not to move. 
+The resting period is followed by a fingertapping task of 20 seconds, performed by the participant. This is repeated 10 times. 
+
+Authors: GvB
