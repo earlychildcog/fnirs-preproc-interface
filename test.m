@@ -5,7 +5,8 @@ datapath = "data/single_device_finger_tapping"; % snirf file or folder with snir
 
 %%
 guinirs = guinirsClass(datapath);
-guinirs.startParallelPool(4)
+guinirs.startParallelPool(4);
+guinirs.init();
 stepRun(guinirs);
 channelsToPlot = [1 2 3 4];
 guinirs.guibuild(channelsToPlot)
