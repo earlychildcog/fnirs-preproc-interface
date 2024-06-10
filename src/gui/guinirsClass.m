@@ -44,9 +44,10 @@ classdef guinirsClass < handle
     methods
         function gui = guinirsClass(input, channelsToPlot)
             arguments
-                input string = string([])
+                input string {mustBeFileOrFolder} = string([])
                 channelsToPlot double = []
             end
+            % set data filenames
             if ~isempty(input)
                 if isfile(input)
                     gui.filename = input;

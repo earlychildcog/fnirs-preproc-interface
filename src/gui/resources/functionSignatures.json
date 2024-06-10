@@ -1,0 +1,8 @@
+{
+    "guinirsClass": {
+        "inputs": [
+            {"name":"input", "kind":"required","type":"file=*.snirf"},
+            {"name":"channelsToPlot", "kind":"ordered"}
+        ]
+    }
+}
