@@ -81,7 +81,9 @@ classdef guinirsClass < handle
             end
             [~, subj] = fileparts(fileparts(gui.listFiles));
             gui.subjTable = table(gui.listFiles, subj, false(nSubj,1), 'VariableNames',["filename" "run" "processed"]);
-            gui.steps = stepConstructor();
+            if isempty(gui.steps)
+                gui.steps = stepConstructor();
+            end
             gui.guiLayout = guinirsLayout(gui);
             gui.checkParallelPool;
             gui.subjload(gui.filename);

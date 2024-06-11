@@ -3,7 +3,7 @@ function acquired = synchrony(acquired)
 % you can remove markers you are not interested in, shorten the recording, make fixes etc 
 % that you would not want to do on your snirf files
 
-
+disp(1)
 
 
 
