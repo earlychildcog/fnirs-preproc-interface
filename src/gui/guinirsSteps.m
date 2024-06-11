@@ -79,7 +79,7 @@ classdef guinirsSteps < handle
             end
             obj.iProc = obj.iProc + 1;
             tab = uitab(dataTabGroup...
-                ,'Title',obj.parent.labels(obj.iProc), 'UserData',obj.iProc);
+                ,'Title',obj.parent.steps(obj.iProc).name, 'UserData',obj.iProc);
             objData = obj.parent.data(obj.iProc);
             guiParams = obj.parent.getPlotStyleParams();
             set(tab ...

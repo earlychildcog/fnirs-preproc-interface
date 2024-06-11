@@ -75,14 +75,17 @@ classdef guinirsClass < handle
             datafolder = fileparts(gui.filename);
             if isempty(gui.folderExport)
                 gui.folderExport = fullfile(datafolder, 'processed');
-                mkdir(gui.folderExport);
+                if ~isfolder(gui.folderExport)
+                    mkdir(gui.folderExport);
+                end
             end
             [~, subj] = fileparts(fileparts(gui.listFiles));
             gui.subjTable = table(gui.listFiles, subj, false(nSubj,1), 'VariableNames',["filename" "run" "processed"]);
-            gui.subjload(gui.filename);
             gui.steps = stepConstructor();
             gui.guiLayout = guinirsLayout(gui);
             gui.checkParallelPool;
+            gui.subjload(gui.filename);
+
         end
         function enable(guinirs)
             % USES JAVA OBJECTS WHICH ARE UNDOCUMENTED IN MATLAB
@@ -124,8 +127,10 @@ classdef guinirsClass < handle
             if guinirs.flagComputed     % if we already have run the preprocessing steps
                 guinirs.load
                 guinirs.probe = guinirs.acquired.probe;
-                guinirs.updateAllPlots
-                guinirs.guiSteps.updateLimitsForNewSubj;
+                if ~isempty(guinirs.hFig)
+                    guinirs.updateAllPlots
+                    guinirs.guiSteps.updateLimitsForNewSubj;
+                end
             else
                 guinirs.acquired = SnirfClass(guinirs.filename);
                 try
