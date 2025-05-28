@@ -20,7 +20,7 @@ classdef nirsDataClass
             obj.mTable = tableFromMeaslist(dataClassHomer.measurementList);
             obj.tInc = tInc;
             obj.tIncCh = tIncCh;
-            obj = obj.downsample_(1);
+            obj = obj.downsample_(10);
             % remove hbt if dc
             if ~isempty(obj.measurementList) && startsWith(obj.measurementList(1).dataTypeLabel, 'Hb','IgnoreCase',true)
                 hbt = strcmpi({obj.measurementList.dataTypeLabel}, 'HbT');
