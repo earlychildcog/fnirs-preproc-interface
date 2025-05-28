@@ -3,6 +3,8 @@
 .DS_Store
 *processed*
 *.mat
+# But allow db2.mat specifically
+!db2.mat
 data/*
 !data/single_device_finger_tapping
 main_*.m
