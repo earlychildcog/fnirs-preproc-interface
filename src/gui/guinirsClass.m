@@ -90,22 +90,28 @@ classdef guinirsClass < handle
 
         end
         function enable(guinirs)
-            % USES JAVA OBJECTS WHICH ARE UNDOCUMENTED IN MATLAB
-            % disable the gui while preprocessing takes place
-            warning off
-            jFigPeer = get(handle(guinirs.hFig),'JavaFrame'); 
-            jWindow = jFigPeer.fHG2Client.getWindow;
-            warning on
-            set(handle(jWindow),'Enabled',true)  % or true
+            % % USES JAVA OBJECTS WHICH ARE UNDOCUMENTED IN MATLAB
+            % % disable the gui while preprocessing takes place
+            % warning off
+            % jFigPeer = get(handle(guinirs.hFig),'JavaFrame'); 
+            % jWindow = jFigPeer.fHG2Client.getWindow;
+            % warning on
+            % set(handle(jWindow),'Enabled',true)  % or true
+    % Enable interactivity for all UI components in the figure
+    components = findall(guinirs.hFig, '-property', 'Enable');
+    set(components, 'Enable', 'on');
         end
         function disable(guinirs)
-            % USES JAVA OBJECTS WHICH ARE UNDOCUMENTED IN MATLAB
-            % disable the gui while preprocessing takes place
-            warning off
-            jFigPeer = get(handle(guinirs.hFig),'JavaFrame'); 
-            jWindow = jFigPeer.fHG2Client.getWindow;
-            warning on
-            set(handle(jWindow),'Enabled',false)  % or true
+    % Enable interactivity for all UI components in the figure
+    components = findall(guinirs.hFig, '-property', 'Enable');
+    set(components, 'Enable', 'off');
+            % % USES JAVA OBJECTS WHICH ARE UNDOCUMENTED IN MATLAB
+            % % disable the gui while preprocessing takes place
+            % warning off
+            % jFigPeer = get(handle(guinirs.hFig),'JavaFrame'); 
+            % jWindow = jFigPeer.fHG2Client.getWindow;
+            % warning on
+            % set(handle(jWindow),'Enabled',false)  % or true
         end
         % load a subject ----> o|o
         function subjload(guinirs, newfilename)
