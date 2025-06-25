@@ -260,7 +260,7 @@ classdef guinirsSteps < handle
                 if ~isempty(data.tInc) && any(data.tInc{1} == 0)
                     iArt = iArt + 1;
                     t = data.time;
-                    inc = data.tInc{1};
+                    inc = data.tInc{1}(1:numel(t),:);
                     t(inc == 1) = [];
                     art_full(iArt) = plot(obj.axis_stim ,t, 0.75*ones(size(t)), '.','MarkerSize',6,'Color', [1 0 0]); %obj.colourmap(iStep,:))
                 end
@@ -406,6 +406,7 @@ classdef guinirsSteps < handle
                             if any(~I)
                                 t = ln_(iLine).XData;
                                 y = ln_(iLine).YData;
+                                I = I(1:numel(t));      % not according to specification, tIncCh includes some metadata in the last 4 elements
                                 t(I) = NaN;
                                 y(I) = NaN;
                                 lines_artifact_(iLineArt) = plot(ln_(iLine).Parent,t,y,'-','linewidth',2*ln_(iLine).LineWidth,'color',[1 0.75 1],'UserData',ln_(iLine),'visible', ln_(iLine).Visible);
