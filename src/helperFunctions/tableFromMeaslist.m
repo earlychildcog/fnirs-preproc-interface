@@ -16,7 +16,7 @@ else
     % datatype = "dc";
 end
 M = table(source,detector,type,typeLabel);
-M.id = arrayfun(@(x,y)int32(sum(M.source < x) + sum(M.source == x & M.detector < y)),M.source, M.detector)/max(type)+1;
+M.id = arrayfun(@(x,y)int32(sum(M.source < x) + sum(M.source == x & M.detector < y)),M.source, M.detector)/int32(max(type))+1;
 % [M, I] = sortrows(M);
 % M.id = ceil(int32(1:size(M,1))'/max(type));
 % M = M(I,:);
