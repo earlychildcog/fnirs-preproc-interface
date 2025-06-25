@@ -17,7 +17,7 @@ classdef guinirsClass < handle
         % list acquired  for future...
         listAcquired
         ParallelPool        parallel.ProcessPool
-        fnPreload       = "prestepRun"
+        fnPreload       function_handle  = @preload.prestepRun
 
         % process done so far
         subjTable       table
@@ -142,7 +142,7 @@ classdef guinirsClass < handle
             else
                 guinirs.acquired = SnirfClass(guinirs.filename);
                 try
-                    guinirs.acquired = preload.(guinirs.fnPreload)(guinirs.acquired);
+                    guinirs.acquired = feval(guinirs.fnPreload, guinirs.acquired);
                 catch err
                     warning(err.identifier ,"[ERROR] Preload script exitted with error:\n\t%s", err.message)
                 end
